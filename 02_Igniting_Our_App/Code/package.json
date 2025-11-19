@@ -1,0 +1,21 @@
+{
+  "name": "igniting_our_app",
+  "version": "1.0.0",
+  "description": "initializing npm in it",
+  "license": "ISC",
+  "author": "Najmush Saquib Ali",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
