@@ -59,6 +59,7 @@ const Header = ()=>{
                 <div className="logoContainer">
                     <img src={logo}/>
                 </div>
+                <div className="foodyBuddy"><h1>Foody Buddy</h1></div>
                 <div className="navItems">
                     <ul>
                         <li>Home</li>
