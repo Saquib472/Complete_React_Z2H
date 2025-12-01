@@ -1,0 +1,19 @@
+{
+  "name": "foodybuddy",
+  "version": "1.0.0",
+  "description": "food buddy app",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router": "^7.9.6"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  }
+}
