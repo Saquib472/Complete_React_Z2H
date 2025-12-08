@@ -14,4 +14,10 @@ Here you will find Complete React Codes with Study Material And Interviews. Insp
 
 07_Finding_The_Path : Continuation of Foody Buddy App. Dependency Array , rafce , routing , react-router , createBrowserRouter , RouterProvider , Outlet , Link , In React page never reloads it change the component that's why it is Single page Application , Error , useRouteError() Hook , Two types of Routing - Client Side Routing and Server Side Routing , In React as all the components loads in initial so while routing our page not get refreshed so it is Client side Routing , Dynamic Routing , useParams() Hook , path : '/restaurants/:resId' 
 
-08_Lets_Get_Classy : Class Based Component , 
+08_Lets_Get_Classy : Continuation of Foody Buddy App. Class Based Component , class ClassName extends React.Component , Class based component Life Cycle , constructor() -> super() , render() , componentDidMount() , componentDidUpdate() , componentWillUnmount().
+
+09_Optimizing_Our_App : Continuation of Foody Buddy App. Custom hooks , Created Some Custom hooks --> useFetchMenuData , useOnlineStatus . Chunking/ Code Splitting/ Lazy Loading/ Dynamic Bundling/ On demand Loading/ dynamic import. ==> import { lazy, Suspence } from 'react'
+
+10_Jo_Dikhta_Hai_Vo_Bikta_Hai : Continuation of Foody Buddy App. Different ways to add CSS => Normal CSS , SCSS and SAPP , Styled Component , Material UI , Ant Design , Chakra UI , Bootstrap , Tailwind CSS.
+
+11_Data_Is_The_New_Oil : Continuation of Foody Buddy App. Higher Order Component ==> A Component which takes a Component as argument and returns a Component with some modification. , Controlled & Uncontrolled Component , Lifting The State Up , Props Drilling , Context API , 

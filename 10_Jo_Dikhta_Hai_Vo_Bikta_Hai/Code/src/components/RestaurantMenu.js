@@ -12,9 +12,9 @@ const RestaurantMenu = () => {
     const {itemCards} = resInfo.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
     return (
         <>
-        <div className="res-menu-details">
-            <h1>{name}</h1>
-            <div className="res-menu-details-rating-sec">
+        <div className="mx-auto max-w-4xl mt-20 px-5">
+            <h1 className="font-bold text-xl">{name}</h1>
+            <div className="shadow-lg/60 p-8 rounded-2xl my-8">
                 <h2>{`${avgRatingString}(${totalRatingsString})-${costForTwo}`}</h2>
             </div>
             {
