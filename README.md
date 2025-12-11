@@ -20,4 +20,4 @@ Here you will find Complete React Codes with Study Material And Interviews. Insp
 
 10_Jo_Dikhta_Hai_Vo_Bikta_Hai : Continuation of Foody Buddy App. Different ways to add CSS => Normal CSS , SCSS and SAPP , Styled Component , Material UI , Ant Design , Chakra UI , Bootstrap , Tailwind CSS.
 
-11_Data_Is_The_New_Oil : Continuation of Foody Buddy App. Higher Order Component ==> A Component which takes a Component as argument and returns a Component with some modification. , Controlled & Uncontrolled Component , Lifting The State Up , Props Drilling , Context API , 
+11_Data_Is_The_New_Oil : Continuation of Foody Buddy App. Higher Order Component ==> A Component which takes a Component as argument and returns a Component with some modification. , Controlled & Uncontrolled Component , Lifting The State Up , Props Drilling , Context API , createContext({}) , useContext(Createdcontext) ,Fetching Context :  For Class based Component ==> Createdcontext.Consumer (Check AboutUs.js), For Functional Component ==> CreatedContext.Provider (Check App.js) , 

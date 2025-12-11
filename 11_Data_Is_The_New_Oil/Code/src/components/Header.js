@@ -1,12 +1,14 @@
 import logo from "url:../../assets/logo.png";
 import cart from "url:../../assets/cart.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [userLogBtn , setUserLogBtn] = useState('LogIn')
   const online = useOnlineStatus() // A Custom Hook
+  const {logInUser} = useContext(UserContext) // fetching the context using useContext Hook by passing the context we created
   return (
     <div className="shadow-xl">
       <div className="flex justify-between items-center max-w-7xl mx-auto px-5">
@@ -28,7 +30,9 @@ const Header = () => {
             </li>
             <li><button className="Log-In-Out-Btn" onClick={()=>{
               userLogBtn === 'LogIn' ? setUserLogBtn('LogOut') : setUserLogBtn('LogIn')
-              }}>{userLogBtn}</button></li>
+              }}>{userLogBtn}</button>
+            </li>
+            <li className="font-bold">{logInUser}</li>
           </ul>
         </div>
       </div>

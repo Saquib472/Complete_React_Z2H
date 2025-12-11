@@ -28,6 +28,7 @@ const RestaurantMenu = () => {
               "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
           )
           .map((category,index) => (
+            // Controlled Component - Restaurant Menu is Controlling the state of Restaurant Category Component
             <RestaurantCategory
               key={category.card.card.title}
               categoryItem={category}

@@ -1,15 +1,17 @@
 import RestaurantCard, { promotedRestuantCard } from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import RestaurantCardShimmer from "./RestaurantCardShimmer";
 import { RestaurantList_URL } from "../utils/constants";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [restaurantList , setRestaurantList] = useState([])
   const [filteredRestaurantList , setFilteredRestaurantList] = useState([])
   const [searchByResName , setSearchByResName] = useState('')
   const PromotedRestuantCard = promotedRestuantCard(RestaurantCard)
+  const {logInUser , setUserName} = useContext(UserContext) // fetching the context using useContext Hook by passing the context we created
   
   useEffect(()=>{
     fetchData();
@@ -44,6 +46,7 @@ const Body = () => {
         </div>
       </div>) : (
     <div className="px-5 max-w-7xl mx-auto my-10">
+      <h1 className="font-bold mb-4 text-center text-2xl text-blue-700">Welcome {logInUser} 😀 Hungry! Grab your fav</h1>
       <div className="flex justify-between items-center">
         <div>
           <input className="shadow-lg/60 rounded-lg p-3 mr-2" type="text" value={searchByResName} onChange={(e)=>{
@@ -53,6 +56,7 @@ const Body = () => {
             setFilteredRestaurantList(restaurantList.filter((res)=> res.info.name.toLowerCase().includes(searchByResName.toLowerCase())))
           }}>Search</button>
         </div>
+        <input className="shadow-lg/60 rounded-lg p-3 mr-2" type="text" placeholder="Change User Name" value={logInUser} onChange={(e)=>{setUserName(e.target.value)}} />
         <button className="bg-indigo-500 shadow-lg shadow-indigo-500/50 cursor-pointer p-3 text-white font-bold rounded-lg hover:scale-105" onClick={() => {
           setFilteredRestaurantList(restaurantList.filter((res)=> res.info.avgRating > 4.2))
           }}>Find Top Restaurants</button>
