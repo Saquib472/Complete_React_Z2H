@@ -1,0 +1,192 @@
+{
+    "status": true,
+    "message": "Restaurant Menu fetched successfully",
+    "data": {
+        "cards": [
+            {},
+            {},
+            {
+                "card": {
+                    "card": {
+                        "info": {
+                            "id": "234567",
+                            "name": "Burger Hub",
+                            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/24/acfcaacc-edf0-4189-8264-d614d312c0ee_740457.JPG",
+                            "locality": "Park Street",
+                            "areaName": "Downtown",
+                            "costForTwo": "₹300 for two",
+                            "costForTwoMessage": "₹300 for two",
+                            "cuisines": [
+                                "Burgers",
+                                "American",
+                                "Fast Food"
+                            ],
+                            "avgRating": 4.5,
+                            "avgRatingString": "4.5",
+                            "totalRatingsString": "15K+ ratings",
+                            "sla": {
+                                "deliveryTime": 25,
+                                "lastMileTravel": 2,
+                                "lastMileTravelString": "2.0 km",
+                                "slaString": "25 mins"
+                            }
+                        }
+                    }
+                }
+            },
+            {},
+            {
+                "groupedCard": {
+                    "cardGroupMap": {
+                        "REGULAR": {
+                            "cards": [
+                                {},
+                                {
+                                    "card": {
+                                        "card": {
+                                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                                            "title": "Signature Burgers",
+                                            "itemCards": [
+                                                {
+                                                    "card": {
+                                                        "info": {
+                                                            "id": "item_101",
+                                                            "name": "Classic Beef Burger",
+                                                            "category": "Burgers",
+                                                            "description": "Juicy beef patty with lettuce, tomato, onion, and special sauce",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/23/754c1beb-c413-4fc9-b141-d3680387b462_b553356f-7a27-477f-be6e-f6b9ec3a8bdb.jpg",
+                                                            "price": 24900,
+                                                            "defaultPrice": 24900
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "card": {
+                                                        "info": {
+                                                            "id": "item_102",
+                                                            "name": "Chicken Deluxe Burger",
+                                                            "category": "Burgers",
+                                                            "description": "Crispy fried chicken with mayo and fresh vegetables",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/23/754c1beb-c413-4fc9-b141-d3680387b462_b553356f-7a27-477f-be6e-f6b9ec3a8bdb.jpg",
+                                                            "price": 21900
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "card": {
+                                                        "info": {
+                                                            "id": "item_103",
+                                                            "name": "Double Cheese Burger",
+                                                            "category": "Burgers",
+                                                            "description": "Two beef patties with double cheese and bacon",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/23/754c1beb-c413-4fc9-b141-d3680387b462_b553356f-7a27-477f-be6e-f6b9ec3a8bdb.jpg",
+                                                            "price": 32900,
+                                                            "defaultPrice": 32900
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "card": {
+                                        "card": {
+                                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                                            "title": "Veggie Burgers",
+                                            "itemCards": [
+                                                {
+                                                    "card": {
+                                                        "info": {
+                                                            "id": "item_104",
+                                                            "name": "Veggie Delight Burger",
+                                                            "category": "Burgers",
+                                                            "description": "Plant-based patty with fresh veggies and special sauce",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/23/754c1beb-c413-4fc9-b141-d3680387b462_b553356f-7a27-477f-be6e-f6b9ec3a8bdb.jpg",
+                                                            "price": 19900
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "card": {
+                                                        "info": {
+                                                            "id": "item_105",
+                                                            "name": "Paneer Tikka Burger",
+                                                            "category": "Burgers",
+                                                            "description": "Grilled paneer tikka with mint chutney",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/23/754c1beb-c413-4fc9-b141-d3680387b462_b553356f-7a27-477f-be6e-f6b9ec3a8bdb.jpg",
+                                                            "price": 22900,
+                                                            "defaultPrice": 22900
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "card": {
+                                        "card": {
+                                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                                            "title": "Sides",
+                                            "itemCards": [
+                                                {
+                                                    "card": {
+                                                        "info": {
+                                                            "id": "item_106",
+                                                            "name": "French Fries",
+                                                            "category": "Sides",
+                                                            "description": "Crispy golden french fries with seasoning",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/23/754c1beb-c413-4fc9-b141-d3680387b462_b553356f-7a27-477f-be6e-f6b9ec3a8bdb.jpg",
+                                                            "price": 9900,
+                                                            "defaultPrice": 9900
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "card": {
+                                                        "info": {
+                                                            "id": "item_107",
+                                                            "name": "Onion Rings",
+                                                            "category": "Sides",
+                                                            "description": "Crispy battered onion rings",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/23/754c1beb-c413-4fc9-b141-d3680387b462_b553356f-7a27-477f-be6e-f6b9ec3a8bdb.jpg",
+                                                            "price": 11900
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "card": {
+                                        "card": {
+                                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                                            "title": "Beverages",
+                                            "itemCards": [
+                                                {
+                                                    "card": {
+                                                        "info": {
+                                                            "id": "item_108",
+                                                            "name": "Chocolate Shake",
+                                                            "category": "Beverages",
+                                                            "description": "Thick chocolate milkshake",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/23/754c1beb-c413-4fc9-b141-d3680387b462_b553356f-7a27-477f-be6e-f6b9ec3a8bdb.jpg",
+                                                            "price": 12900,
+                                                            "defaultPrice": 12900
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

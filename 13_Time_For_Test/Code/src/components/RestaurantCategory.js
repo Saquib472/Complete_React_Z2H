@@ -5,7 +5,7 @@ const RestaurantCategory = ({categoryItem , openMenuList , setIndex , setMenuOpe
     const {itemCards} = categoryItem.card.card
     return (
         <div className="shadow-xs/20 bg-gray-50 mb-5 p-4 rounded-xl transition-all ease-in-out">
-            <div className="flex justify-between cursor-pointer" onClick={()=> {
+            <div data-testid="accord" className="flex justify-between cursor-pointer" onClick={()=> {
                 setIndex()
                 setMenuOpened(!openMenuList)
                 }

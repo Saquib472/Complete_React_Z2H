@@ -10,7 +10,7 @@ const RestuarantMenuList = ({menuData}) => {
   }
 
   return (
-    <div className="flex justify-between items-center p-2.5 mb-5 bg-white rounded-lg mt-4">
+    <div data-testid="foodItems" className="flex justify-between items-center p-2.5 mb-5 bg-white rounded-lg mt-4">
         <div className="left-sec-menu">
             <h3 className="font-bold">{name}</h3>
             <h4>{`₹${defaultPrice/100 || price/100}`}</h4>

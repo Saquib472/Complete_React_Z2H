@@ -20,7 +20,6 @@ const Body = () => {
   const fetchData = async ()=>{
     const data = await fetch(RestaurantList_URL)
     const fetchedData = await data.json()
-    console.log(fetchedData.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setRestaurantList(fetchedData.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setFilteredRestaurantList(fetchedData.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
@@ -49,10 +48,10 @@ const Body = () => {
       <h1 className="font-bold mb-7 text-center text-2xl text-blue-700">Welcome {logInUser} 😀 Hungry! Grab your fav</h1>
       <div className="flex justify-between items-center">
         <div>
-          <input className="shadow-lg/60 rounded-lg p-3 mr-2" type="text" value={searchByResName} onChange={(e)=>{
+          <input data-testid="searchInput" className="shadow-lg/60 rounded-lg p-3 mr-2" type="text" value={searchByResName} onChange={(e)=>{
             setSearchByResName(e.target.value)
           }}/>
-          <button className="bg-indigo-500 shadow-lg/60 shadow-indigo-500/50 cursor-pointer p-3 text-white font-bold rounded-lg hover:scale-105" onClick={()=>{
+          <button  className="bg-indigo-500 shadow-lg/60 shadow-indigo-500/50 cursor-pointer p-3 text-white font-bold rounded-lg hover:scale-105" onClick={()=>{
             setFilteredRestaurantList(restaurantList.filter((res)=> res.info.name.toLowerCase().includes(searchByResName.toLowerCase())))
           }}>Search</button>
         </div>

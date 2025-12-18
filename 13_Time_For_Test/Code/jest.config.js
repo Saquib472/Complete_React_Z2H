@@ -90,8 +90,19 @@ const config = {
   //   "node"
   // ],
 
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    // 1. Strip the 'url:' prefix and map image imports to your mock file
+    "^url:(.*\\.(png|jpg|jpeg|svg|gif|webp))$": "<rootDir>/src/components/mocks/fileMock.js",
+    
+    // 2. Handle regular image imports (without the url: prefix)
+    "\\.(png|jpg|jpeg|svg|gif|webp)$": "<rootDir>/src/components/mocks/fileMock.js",
+    
+    // 3. Optional: Handle CSS/Style imports if you have them
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],

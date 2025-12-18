@@ -9,7 +9,7 @@ const Cart = () => {
             <div className="shadow-lg p-4 rounded-lg">
                 {
                     items.map((item , index) => (
-                        <div key={index} className="flex justify-between items-center p-2.5 border-b border-blue-900">
+                        <div data-testid="cartItems" key={index} className="flex justify-between items-center p-2.5 border-b border-blue-900">
                             <div className="flex items-center">
                                 <img className="rounded-lg max-w-20 mr-2" src={CDN_URL2 + item.imageId}></img>
                                 <p>{item.name}</p>
