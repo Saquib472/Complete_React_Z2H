@@ -12,41 +12,101 @@ Here you will find Complete React Codes with Study Material And Interviews. Insp
 
 06_Exploring_The_World : Continuation of Foody Buddy App. TOPICS : Monolithic Architecture vs Microservices , useEffect() Hook , Connecting with external world using APIs , Load -> Render -> API -> Render , Call Swiggy's API to get the Restaurants , CORS ERROR , Allow Cors access controll Extension for chrome , get data using fetch() , Shimmer Effect , Why to use local state variable like useState() , search functionality , input field , Swiggy Dummy data file.
 
-07_Finding_The_Path : Continuation of Foody Buddy App. Dependency Array , rafce , routing , react-router , createBrowserRouter , RouterProvider , Outlet , Link , In React page never reloads it change the component that's why it is Single page Application , Error , useRouteError() Hook , Two types of Routing - Client Side Routing and Server Side Routing , In React as all the components loads in initial so while routing our page not get refreshed so it is Client side Routing , Dynamic Routing , useParams() Hook , path : '/restaurants/:resId' 
+# 07_Finding_The_Path : 
+Continuation of Foody Buddy App. 
+- Dependency Array 
+- rafce 
+- routing 
+- react-router 
+- createBrowserRouter 
+- RouterProvider 
+- Outlet 
+- Link 
+* In React page never reloads it change the component that's why it is Single page Application 
+- Error , useRouteError() Hook 
+- Two types of Routing -> Client Side Routing and Server Side Routing 
+- In React as all the components loads in initial so while routing our page not get refreshed so it is Client side Routing 
+- Dynamic Routing -> path : '/restaurants/:resId'  
+- useParams() Hook 
 
-08_Lets_Get_Classy : Continuation of Foody Buddy App. Class Based Component , class ClassName extends React.Component , Class based component Life Cycle , constructor() -> super() , render() , componentDidMount() , componentDidUpdate() , componentWillUnmount().
 
-09_Optimizing_Our_App : Continuation of Foody Buddy App. 
-# Custom hooks , Created Some Custom hooks --> useFetchMenuData , useOnlineStatus . 
-# Chunking/ Code Splitting/ Lazy Loading/ Dynamic Bundling/ On demand Loading/ dynamic import. ==> import { lazy, Suspence } from 'react'
+# 08_Lets_Get_Classy : 
+Continuation of Foody Buddy App. 
+- Class Based Component 
+- class ClassName extends React.Component 
+- Class based component Life Cycle 
+- constructor() -> super() , render() , componentDidMount() , componentDidUpdate() , componentWillUnmount().
 
-10_Jo_Dikhta_Hai_Vo_Bikta_Hai : Continuation of Foody Buddy App. Different ways to add CSS => Normal CSS , SCSS and SAPP , Styled Component , Material UI , Ant Design , Chakra UI , Bootstrap , Tailwind CSS.
+# 09_Optimizing_Our_App : 
+Continuation of Foody Buddy App. 
+- Custom hooks 
+- Created Some Custom hooks --> useFetchMenuData , useOnlineStatus . 
+- Chunking/ Code Splitting/ Lazy Loading/ Dynamic Bundling/ On demand Loading/ dynamic import. 
+- import { lazy, Suspence } from 'react'
 
-11_Data_Is_The_New_Oil : Continuation of Foody Buddy App. Higher Order Component ==> A Component which takes a Component as argument and returns a Component with some modification. , Controlled & Uncontrolled Component , Lifting The State Up , Props Drilling , 
-# Context API , createContext({}) , useContext(Createdcontext) ,Fetching Context :  For Class based Component ==> Createdcontext.Consumer (Check AboutUs.js), For Functional Component ==> CreatedContext.Provider (Check App.js) .
+# 10_Jo_Dikhta_Hai_Vo_Bikta_Hai : 
+Continuation of Foody Buddy App. Different ways to add CSS => Normal CSS , SCSS and SAPP , Styled Component , Material UI , Ant Design , Chakra UI , Bootstrap , Tailwind CSS.
 
-12_Lets_Build_Our_Store : Continuation of Foody Buddy App. Store, Redux Toolkit, Click Add Button -> Dispatch an Action -> Calls Reducer Fucntion -> Updates a Slice of the Store. 
+# 11_Data_Is_The_New_Oil : 
+Continuation of Foody Buddy App. 
+- Higher Order Component ==> A Component which takes a Component as argument and returns a Component with some modification. 
+- Controlled & Uncontrolled Component 
+- Lifting The State Up 
+- Props Drilling 
+- # Context API => 
+    - createContext({}) 
+    - useContext(Createdcontext) 
+    - Fetching Context :  For Class based Component ==> Createdcontext.Consumer (Check AboutUs.js)
+    - For Functional Component ==> CreatedContext.Provider (Check App.js) .
+
+# 12_Lets_Build_Our_Store : 
+Continuation of Foody Buddy App. Store, Redux Toolkit, Click Add Button -> Dispatch an Action -> Calls Reducer Fucntion -> Updates a Slice of the Store. 
 Component Subscribed to Store using Selector. 
-# Steps ==> install @reduxjs/toolkit And react-redux -> Configure Store -> Connect React with Redux -> Create Slice -> Dispatch An Action -> Subscribe using Selector. 
-# Terms ==> configureStore() , Provider , createSlice() , useDispatch() Hook , useSelector() Hook. Subscribe to a particularly needed slice reducer. Mutating Way. 
+- # Steps ==> 
+    - install @reduxjs/toolkit And react-redux 
+    - Configure Store : configureStore()
+    - Connect React with Redux : Provider
+    - Create Slice : createSlice()
+    - Dispatch An Action : useDispatch() Hook
+    - Subscribe using Selector : useSelector() Hook
+- Subscribe to a particularly needed slice reducer. Mutating Way. 
 
-13_Time_For_Test : 
+# 13_Time_For_Test : 
 Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing , Integration Testing , End to End Testing (e2e Testing). 
-# Setting Up Testing in App ==> 
-- Install React Testing Library , 
-- Install Jest , 
-- Install Babel dependencies , 
-- Configure Babel (babel.config.js) (This Babel Configuration will conflict with the configuration of Parcel which uses Babel so we have to handle this.) (Configure Parcel config file to disable default babel transpilation -> Parcel Doc --> Javascript --> Parcel --> Babel --> .parcelrc (configure this)) --> 
-- npm run test --> npm init jest@latest 
-- (Jest Configuration ==> The following questions will help Jest to create a suitable configuration for your project
-√ Would you like to use Typescript for the configuration file? ... no
-√ Choose the test environment that will be used for testing » jsdom (browser-like)
-√ Do you want Jest to add coverage reports? ... yes
-√ Which provider should be used to instrument code for coverage? » babel
-√ Automatically clear mock calls, instances, contexts and results before every test? ... yes ), 
-# JS DOM (Like Browser) --> Install JSdom Library (npm install --save-dev jest-environment-jsdom)
-# Install @babel/preset-react - To make the JSX work in test cases. And Add this to babel.config.js
-# Install npm i -D @testing-library/jest-dom
-# For Test to be run on update - "watch-test": "jest --watch" add to package.json
-# For Test -- render Component , Querying using screen , Assertion using expect .
-# Check the __tests__ folder
+- # Setting Up Testing in App ==> 
+    - Install React Testing Library , 
+    - Install Jest , 
+    - Install Babel dependencies , 
+    - Configure Babel (babel.config.js) (This Babel Configuration will conflict with the configuration of Parcel which uses Babel so we have to handle this.) (Configure Parcel config file to disable default babel transpilation -> Parcel Doc --> Javascript --> Parcel --> Babel --> .parcelrc (configure this)) --> 
+    - npm run test --> npm init jest@latest 
+    - (Jest Configuration ==> The following questions will help Jest to create a suitable configuration for your project
+    √ Would you like to use Typescript for the configuration file? ... no
+    √ Choose the test environment that will be used for testing » jsdom (browser-like)
+    √ Do you want Jest to add coverage reports? ... yes
+    √ Which provider should be used to instrument code for coverage? » babel
+    √ Automatically clear mock calls, instances, contexts and results before every test? ... yes ), 
+
+    - JS DOM (Like Browser) --> Install JSdom Library (npm install --save-dev jest-environment-jsdom)
+    - Install @babel/preset-react - To make the JSX work in test cases. And Add this to babel.config.js
+    - Install npm i -D @testing-library/jest-dom
+- For Test to be run on update --> "watch-test": "jest --watch" (add this to script of package.json)
+- For Test -- render Component , Querying using screen , Assertion using expect .
+- Check the __tests__ folder
+
+# 14_NetflixGPT_The_Beginning : 
+- npx create-react-app NetflixGPT (Uses Webpack bundler)
+- Configured Tailwind CSS
+- # Features
+    - Login/Sign up Page
+        - Sign In/Sign up Form
+        - redirect to Browse Page
+    - Browse Page (After Authentication)
+        - Header
+        - Main Movie Section
+            - Trailer Video in background
+            - Title & Description
+        - Movie Suggestions
+            - Movie List * N
+    - NetflixGPT
+        - Search Bar
+        - Movie Suggestions
