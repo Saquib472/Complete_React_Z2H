@@ -96,7 +96,51 @@ Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing ,
 # 14_NetflixGPT_The_Beginning : 
 - npx create-react-app NetflixGPT (Uses Webpack bundler)
 - Configured Tailwind CSS
-- # Features
+- Routing
+- Sign in / Sign Up Form
+- Toggle to Sign In And Sign Up.
+- Form Validation 
+- * Use Formik Library for Form Validation If there is a large scale Form Page with lots of input fields.
+- useRef() Hook
+- Authentication 
+- Using Google Firebase for Back End And Deployment.
+- # Steps for set up of Google Firebase =>
+    - Link for Doc of Firebase -- https://firebase.google.com/docs/web/setup?authuser=0&_gl=1*1cmxn0v*_ga*MzA2MjY4MDIxLjE3NjY0MjY2ODU.*_ga_CW55HF8NVT*czE3NjY1MDI0MTkkbzQkZzEkdDE3NjY1MDI4ODEkajIyJGwwJGgw
+    - Create a Project
+    - Proceed
+    - Register app
+    - Add App - web
+    - Name for App
+    - Set up Firebase to host App Or Not 
+    - Add Firebase SDK
+    - npm install firebase
+    - configure firebase.js config
+    - Authentication -> Sign in method -> Email Id Password -> Enable
+- # Deploy to Firebase
+        - To host your site with Firebase Hosting, you need the Firebase CLI (a command line tool) 
+        - npm install -g firebase-tools
+        - firebase login
+        - firebase init -> Hosting -> ✔ What do you want to use as your public directory? build -> ✔ Configure as a single-page app (rewrite all urls to /index.html)? No -> ✔ Set up automatic builds and deploys with GitHub? No (generate two folders, firebase.json And .firebaserc)
+        - npm build (build our App for production deployment)
+        - firebase deploy
+- # Anthentication for Our App
+    - Go to Firebase Documentation -> Doc -> build -> web -> Manage users or Password Authentication.
+    - Use Web Modular API
+    - As auth is been used almost every where so Add "export const auth = getAuth()" in firebase.js
+    - Sign up Logic (Find the Password Authentication -> Create A password based account -> Copy the API and use it.) [Check Login.js Page handleButtonClick function for reference]
+    - Sign in Logic (Find the Password Authentication -> Sign in a user with an email address and password -> Copy the API and use it.) [Check Login.js Page handleButtonClick function for reference]
+
+- Set Up Redux to store the User Info.
+- Get the currently signed-in user -> using onAuthStateChanged() [Check Body.js for reference]
+- useNavigate() Hook.
+- Update the user. (updateProfile())
+- Sign Out Feature.
+- Bug Fixes : Sign Up User display Name and Profile Picture Update.
+- Bug Fixes : If the user is not Logged in Redirect the /browse to /login page and Vice-versa.
+- Unsubscribed to the onAuthStateChanged callback.
+- Add hardcoded values to the constants file.
+
+- # Features :-
     - Login/Sign up Page
         - Sign In/Sign up Form
         - redirect to Browse Page
