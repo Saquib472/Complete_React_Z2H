@@ -140,6 +140,54 @@ Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing ,
 - Unsubscribed to the onAuthStateChanged callback.
 - Add hardcoded values to the constants file.
 
+- # TMDB Movies (Fetching Movies Data from this website API)
+    - tmdb website is blocked in India. Do DNS settings.
+    - Go to tmdb website
+    - Sign Up
+    - Create App
+    - After Creating App, API Key and API read access token will be generated.
+    - Go to Doc of TMDB
+    - Go to API Reference
+    - MOVIE LISTS (Left Section)
+    - LANGUAGE(select JavaScript)
+    - Get Data from TMDB Now Playing Movies list API
+- Create Slice / Reducer for Now playing Movie List and Store it.
+- Create a Custom Hook for the same -> useNowPlayingMovies() Custom Hook.
+
+- # Making Browse Page => 
+    - Planning the Design Structure of Browse Page :- 
+        - MainContainer
+            - VideoBackground
+            - VideoTitle
+        - SecondaryContainer
+            - MovieList * n
+                - Moviecard * n
+    - Implementation :- 
+        - Create two components, MainContainer And SecondaryContainer. And include this in Browse Container.
+        - Create VideoBackground and VideoTitle Components. Include this in MainContainer.
+        - In MainContainer, get the first movie data from store using useSelector()
+            - Make the VideoTitle with that movie Data. (Take title and overview)
+            - Make the VideoBackground with that Movie Data. (Take id)
+            - Call an API from TMDB Movies Get Video by passing the id. It will return the objects with lots of trailer, teaser etc. data.
+            - Filter Out Trailer from there. and use the Youtube Id.
+            - Store the id in Movies Slice.
+            - Do create a Custom Hook to fetch and store the Trailer Id.
+            - Using the Youtube Id , Pass it to Youtube embadded code and use 
+            - Fixed the Youtube Autoplay and loop it.
+        - SecondaryContainer
+            - Create MovieList Component And MovieCard Component.
+            - Add MovieList inside the SecondaryContainer Component.
+                - Add MovieCard inside MovieList Component.
+                - In constants create a Movie Poster CDN to show the Poster Image of Movies.
+                - CDN for images can be found in TMDB Guides -> IMAGES -> Guides.
+                - Showing Movie List as Movie Card for Now Playing.
+                - Custom Hooks created -> 
+                    - usePopularMovies() 
+                    - useTopRatedMovies()
+                    - useUpcomingMovies()
+                - Fixed the Design of SecondaryContainer
+
+
 - # Features :-
     - Login/Sign up Page
         - Sign In/Sign up Form

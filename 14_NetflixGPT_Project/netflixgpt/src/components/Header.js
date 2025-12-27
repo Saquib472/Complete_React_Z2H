@@ -36,11 +36,11 @@ const Header = () => {
     
   }
   return (
-    <div className="absolute bg-gradient-to-b from-black w-full flex justify-between items-center">
+    <div className="absolute bg-gradient-to-b from-black w-full flex justify-between items-center z-20">
         <img className="w-2/12" src={LOGO_URL} alt='Netflix GPT'/>
         {user && (<div className="flex items-center">
           <img src={user.photoURL} alt="userImage" className="max-w-10 rounded-md"/>
-          <button onClick={handleSignOut} className="text-white bg-red-500 p-2 rounded-md text-sm m-2 font-bold">Sign Out</button>
+          <button onClick={handleSignOut} className="text-white bg-red-600 p-2 rounded-md text-sm m-2 font-bold">Sign Out</button>
         </div>)}
     </div>
   )
