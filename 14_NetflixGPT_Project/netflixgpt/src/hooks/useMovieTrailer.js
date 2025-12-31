@@ -1,10 +1,11 @@
 import { useEffect } from "react"
 import { API_OPTIONS } from "../utils/constants"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { addMovieTrailer } from "../utils/moviesSlice"
 
 const useMovieTrailer = (id) => {
     const dispatch = useDispatch()
+    const movieTrailer = useSelector(store => store.movies?.movieTrailer) //For Memoization
     const getVideoTitleId = async()=>{
         const data = await fetch('https://api.themoviedb.org/3/movie/'+id+'/videos?language=en-US', API_OPTIONS)
         const json = await data.json()
@@ -14,7 +15,7 @@ const useMovieTrailer = (id) => {
         dispatch(addMovieTrailer(trailer))
     }
     useEffect(()=>{
-        getVideoTitleId()
+        !movieTrailer && getVideoTitleId()
     },[])
 }
 

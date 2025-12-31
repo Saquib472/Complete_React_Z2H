@@ -188,6 +188,30 @@ Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing ,
                 - Fixed the Design of SecondaryContainer
 
 
+- # Making GPT Page :- 
+    - Create One Button to Header. On click of this botton toggle b/w browse page and gpt search page.
+    - Two toggle b/w those two page create a separate Slice in Store. And Use this to toggle.
+    - Create GptSearchPage And In GptSearchPage -> 
+        - Create Two Components, GptSearchBar And GptMovieSuggestions.
+        - Language Change Functionality.
+            - Create a constants file for this named languageConstants.js in utils Folder.
+            - Create a appConfigSlice to store selected language and more config like Dark/Light Mode.
+            - Create an Options of Languages.
+    - Adding GPT APIs to Our App.
+        - Go to platform.openai.com 
+        - Personal -> API Keys 
+        - Check npm openai Readme
+        - npm i openai
+        - create a openai configuration in utils
+        - Call Openai API to get Movies
+        - Loop over each movie and Call the TMDB API. But have to do Promise.all
+        - Store the Movies and the TMDB results in gptSlice.
+        - Use this in GptMoviesSuggestions Component and Reuse the MovieList.js to show the TMDB Results.
+        - Add removeGptMovieResults on Back To Home button
+        - To keep the API Keys Safe create .env and Store the keys there.
+        - Memoization
+
+
 - # Features :-
     - Login/Sign up Page
         - Sign In/Sign up Form

@@ -8,3 +8,13 @@ export const API_OPTIONS = {
   }
 };
 export const TMDB_IMAGE_CDN = "https://image.tmdb.org/t/p/w500"
+
+export const BACKGROUND_IMG = "https://assets.nflxext.com/ffe/siteui/vlv3/8e4a7625-f942-48f5-a9b0-d470b772bc8c/web/IN-en-20251215-TRIFECTA-perspective_a8575e53-99ab-4f16-a2d6-c037acaf12a6_small.jpg"
+
+export const LANGUAGE_OPTIONS = [
+  {initializer: 'en' , name : 'English'},
+  {initializer: 'hindi' , name : 'Hindi'},
+  {initializer: 'spanish' , name : 'Spanish'}
+]
+
+export const OPENAI_KEY = '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'
