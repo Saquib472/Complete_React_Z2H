@@ -17,4 +17,4 @@ export const LANGUAGE_OPTIONS = [
   {initializer: 'spanish' , name : 'Spanish'}
 ]
 
-export const OPENAI_KEY = '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'
+// export const OPENAI_KEY = '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'
