@@ -50,16 +50,16 @@ const Header = () => {
 
   return (
     <div className="absolute bg-gradient-to-b from-black w-full flex justify-between items-center z-20">
-        <img className="w-2/12" src={LOGO_URL} alt='Netflix GPT'/>
+        <img className="w-4/12 md:w-2/12" src={LOGO_URL} alt='Netflix GPT'/>
         {user && (<div className="flex items-center">
-            {toggleToGptPage && <select onChange={handleLanguage} className="bg-gray-700 text-white py-1 rounded-md">
+            {toggleToGptPage && <select onChange={handleLanguage} className="bg-gray-700 text-white py-1 rounded-md text-xs md:text-sm">
               {
                 LANGUAGE_OPTIONS.map(lang => <option key={lang.initializer} value={lang.initializer}>{lang.name}</option>)
               }
             </select>}
-          <button onClick={handleGptButton} className="px-4 py-2 bg-purple-700 text-white rounded-md m-2 text-sm font-bold">{!toggleToGptPage ?'GPT Search' : 'Back To Home'}</button>
-          <img src={user.photoURL} alt="userImage" className="max-w-10 rounded-md"/>
-          <button onClick={handleSignOut} className="text-white bg-[red] px-4 py-2 rounded-md text-sm m-2 font-bold">Sign Out</button>
+          <button onClick={handleGptButton} className="px-2 py-1 md:px-4 md:py-2 bg-purple-700 text-white rounded-md my-2 mx-1 md:m-2 text-xs md:text-sm font-bold">{!toggleToGptPage ?'GPT Search' : 'Back To Home'}</button>
+          <img src={user.photoURL} alt="userImage" className="max-w-10 rounded-md hidden md:block"/>
+          <button onClick={handleSignOut} className="text-white bg-[red] px-2 md:px-4 py-1 md:py-2 rounded-md text-xs md:text-sm my-2 mx-1 md:m-2 font-bold">Sign Out</button>
         </div>)}
     </div>
   )

@@ -67,7 +67,7 @@ const LogIn = () => {
       <Header />
       <div>
         <img
-          className="w-full"
+          className="w-full fixed h-screen object-cover"
           src={BACKGROUND_IMG}
           alt="Background"
         />
@@ -76,7 +76,7 @@ const LogIn = () => {
         onSubmit={(e) => {
           e.preventDefault();
         }}
-        className="bg-black bg-opacity-90 flex flex-col w-3/12 p-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg"
+        className="bg-black bg-opacity-90 flex flex-col w-11/12 md:w-3/12 p-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg"
       >
         <h1 className="text-white font-bold text-lg mb-3">
           {loggedInUser ? "Sign In" : "Sign Up"}
