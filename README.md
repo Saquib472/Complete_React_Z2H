@@ -93,7 +93,7 @@ Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing ,
 - For Test -- render Component , Querying using screen , Assertion using expect .
 - Check the __tests__ folder
 
-# 14_NetflixGPT_The_Beginning : 
+# 14_NetflixGPT_Project : 
 - npx create-react-app NetflixGPT (Uses Webpack bundler)
 - Configured Tailwind CSS
 - Routing
@@ -210,6 +210,7 @@ Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing ,
         - Add removeGptMovieResults on Back To Home button
         - To keep the API Keys Safe create .env and Store the keys there.
         - Memoization
+        - Make it Mobile friendly. 
 
 
 - # Features :-
