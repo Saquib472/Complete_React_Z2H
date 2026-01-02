@@ -1,16 +1,89 @@
 Here you will find Complete React Codes with Study Material And Interviews. Inspired from Namaste React Course.
 
-01_Inception : Has basic start of React. KEYWORDS : React.createElement , ReactDOM.createRoot , root.render , crossorigin / CORS (Cross Origin Resource Sharing) , CDN , Library vs Framework.
+# 01_Inception : 
+Has basic start of React. KEYWORDS : 
+- React.createElement , 
+- ReactDOM.createRoot , 
+- root.render , 
+- crossorigin / CORS (Cross Origin Resource Sharing) , 
+- CDN , 
+- Library vs Framework.
 
-02_Igniting_Our_App : The topics covered in these are : Bundler , Parcel , npm , npx , package.json , package-lock.json , dependencies vs dev dependencies , code optimization , dev vs production build , node modules , .parcel-cache , dist folder , .gitignore , React using npm , minification , Hot Reloading , HMT , Tree Shacking , browsers list , and more.
+# 02_Igniting_Our_App : 
+The topics covered in these are : 
+- Bundler , 
+- Parcel , 
+- npm , 
+- npx , 
+- package.json , package-lock.json , 
+- dependencies vs dev dependencies , 
+- code optimization , 
+- dev vs production build , 
+- node modules , 
+- .parcel-cache , 
+- dist folder , 
+- .gitignore , 
+- React using npm , 
+- minification , 
+- Hot Reloading , 
+- HMT , 
+- Tree Shacking , 
+- browsers list , and more.
 
-03_Laying_The_Foundation : The Topics or KEYWORDS : JSX , JSX over React.createElement , Advantage of using JSX, How JSX transfers to Browser understandable code , Parcel and Babel doing the Job, COMPONENTS , Functional Components , Component Composition (Component inside Component) , Writting javascript inside JSX using "{}".
+# 03_Laying_The_Foundation : 
+The Topics or KEYWORDS : 
+- JSX , 
+- JSX over React.createElement , 
+- Advantage of using JSX, 
+- How JSX transfers to Browser understandable code , 
+- Parcel and Babel doing the Job, 
+- COMPONENTS , 
+- Functional Components , 
+- Component Composition (Component inside Component) , 
+- Writting javascript inside JSX using "{}".
 
-04_Talk_is_Cheap_Show_Me_The_Code : Started with Foody Buddy App building, an Online Food Ordering App. Started with Components Creation , UI design, Header design, Body with small restaurant cards with dynamic details, props, looping through map method.
+# 04_Talk_is_Cheap_Show_Me_The_Code : 
+Started with Foody Buddy App building, an Online Food Ordering App. 
+- Started with Components Creation , 
+- UI design, 
+- Header design, 
+- Body with small restaurant cards with dynamic details, 
+- props, 
+- looping through map method.
 
-05_Lets_Get_Hooked : Continuation of Foody Buddy App. Structured the code files. Created separate Folders. Created src folder and put App.js in it. In src Created Components folder and separate the components. Added utils folder with utilities like CDN links and mock data of restaurant. KEYWORDS : import and export , default export/import and named export/import , Hooks , useState() hook , React is good at DOM manupulation , As soon as the state changed React rerender the component , React make the data layer sync with the UI layer , Virtual DOM , Reconcilation Algorithm (React fibre) or Dff Algorithm => Comparing the current VDOM with updated VDOM and update the specific change in the Real DOM.
+# 05_Lets_Get_Hooked : 
+Continuation of Foody Buddy App. 
+- Structured the code files. 
+- Created separate Folders. 
+- Created src folder and put App.js in it. 
+- In src Created Components folder and separate the components. 
+- Added utils folder with utilities like CDN links and mock data of restaurant. 
+- KEYWORDS : 
+    - import and export , 
+    - default export/import and named export/import , 
+    - Hooks
+    - useState() hook , 
+    - React is good at DOM manupulation , 
+    - As soon as the state changed React rerender the component , 
+    - React make the data layer sync with the UI layer , 
+    - Virtual DOM , 
+    - Reconcilation Algorithm (React fibre) or Dff Algorithm => Comparing the current VDOM with updated VDOM and update the specific change in the Real DOM.
 
-06_Exploring_The_World : Continuation of Foody Buddy App. TOPICS : Monolithic Architecture vs Microservices , useEffect() Hook , Connecting with external world using APIs , Load -> Render -> API -> Render , Call Swiggy's API to get the Restaurants , CORS ERROR , Allow Cors access controll Extension for chrome , get data using fetch() , Shimmer Effect , Why to use local state variable like useState() , search functionality , input field , Swiggy Dummy data file.
+# 06_Exploring_The_World : 
+Continuation of Foody Buddy App. TOPICS : 
+- Monolithic Architecture vs Microservices , 
+- useEffect() Hook , 
+- Connecting with external world using APIs , 
+- Load -> Render -> API -> Render , 
+- Call Swiggy's API to get the Restaurants , 
+- CORS ERROR , 
+- Allow Cors access controll Extension for chrome , 
+- get data using fetch() , 
+- Shimmer Effect , 
+- Why to use local state variable like useState() , 
+- search functionality , 
+- input field , 
+- Swiggy Dummy data file.
 
 # 07_Finding_The_Path : 
 Continuation of Foody Buddy App. 
@@ -62,7 +135,7 @@ Continuation of Foody Buddy App.
 # 12_Lets_Build_Our_Store : 
 Continuation of Foody Buddy App. Store, Redux Toolkit, Click Add Button -> Dispatch an Action -> Calls Reducer Fucntion -> Updates a Slice of the Store. 
 Component Subscribed to Store using Selector. 
-- # Steps ==> 
+- # Steps => 
     - install @reduxjs/toolkit And react-redux 
     - Configure Store : configureStore()
     - Connect React with Redux : Provider
