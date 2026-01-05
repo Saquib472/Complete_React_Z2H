@@ -300,3 +300,150 @@ Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing ,
     - NetflixGPT
         - Search Bar
         - Movie Suggestions
+
+# 15_Youtube_Project : 
+- Tech Stack =>
+    - React.js
+    - Redux
+    - Tailwind Css
+    - react-router
+    - bundler - Vite
+    - jest , react-testing-library
+
+- Planning =>
+    - Header
+        - Hamburger Menu (Which Opens and Closes the Side panel)
+        - YouTube Logo
+        - Search Bar
+        - Profile Icon
+    - Body
+        - Side Bar
+            - Links like Home , Shorts , Subscriptions etc.
+        - Main Container
+            - Button Lists
+            - Video Lists
+                - Click on a Video It will Open a New Video in /watch Page.
+    - /watch Page
+        - Video Section
+        - Comment Section
+        - Video Suggestion Section
+
+- Components Distribution =>
+    - Head 
+    - Body
+        - SideBar
+            - MenuItems
+        - MainContainer
+            - ButtonList
+            - VideoContainer
+                - VideoCard
+    - WatchVideo
+
+- Implementation =>
+    - npm create vite@latest
+    - Clean up existing code.
+    - npm install -D tailwindcss@3 postcss autoprefixer
+    - npx tailwindcss init -p
+    - Add Paths to tailwind.config.js ("./src/**/*.{js,ts,jsx,tsx}")
+    - Add in App.css or index.css 
+        - @tailwind base; @tailwind components; @tailwind utilities;
+    - Restart vs code and Rerun npm run dev
+    - Create components folder inside src
+    - Create Head , Body , SideBar , MainContainer , ButtonList , VideoContainer Components.
+    - Create a utils folder -> constants file (Store all hardcoded URLs and Links)
+    - Head Implementation 🤯
+        - Left Section : Hamburger Menu , Youtube Logo
+        - Middle Section : Search Input , Search Button
+        - Right Section : Icon Logo
+    - Body Implementation 🧜‍♂️
+        - Side Bar 
+            - On click of Hamburger Menu in Header, the sidebar will toggle. 
+            - To do this Create Store And a appSlice for all the configuration related state.
+            - npm install @reduxjs/toolkit
+            - npm install react-redux
+            - Configure Store
+                - Create store.js 
+            - Create appSlice.js having action toggleMenu
+            - Provider
+            - On click of Hamburger Menu -> dispatch an action toggleMenu -> action call the function -> store will update. SideBar is subscribe to the appSlice.
+        - Main Container
+            - ButtonList
+                - Button
+            - VideoContainer
+                - Call Youtube API for Videos.
+                - Google Search Youtube Video API (Documentation)
+                - Google Search Youtube Video API Key Auth (console.cloud.google.com)
+                - Enable Youtube video api(search for it there) from console.cloud.google.com
+                - Fetch the data from API
+                - Create VideoCard Component
+                - Higher Order Component
+        - Watch Page
+            - Create WatchPage Container
+            - npm i react-router
+            - React Routing (Head and SideBar will be intact And Only MainContainer will be change to WatchPage)
+            - Use Link for routing
+            - useSearchParams() hook to get the query param And Id of youtube video.
+            - use Youtube embadded code iframe.
+    - Search Implementation : 🔍
+        - Google search for -> Youtube suggestion API in json -> http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=Query 
+        - For search use *Debouncing* 
+            - Example:  
+                - press key - i
+                - render component
+                - useEffect()
+                - setTimeOut - Start the timer => Make API CALL after 200ms.
+                - If user Press key - ip
+                - destroy the component ( useEffect return method will be Called.) (In return of useEffect clearTimeOut will be Called which clear the timer.)
+                - re-render the component
+                - useEffect()
+                - setTimeOut - Start the timer => Make API CALL after 200ms.
+        - Create a section for search results.
+        - Caching / memoizing the search result in store by creating a Slice so that less number of API Calls appens.
+        - Create searchSlice.
+        - KeyWord : LRU
+        - For Cache Check the files : Head.jsx -> useEffect() hook And searchSlice.js
+    - Watch Page -> Comment Section : 👍
+        - Create Comment Component
+        - comment data should look like -> 
+            - comments : [
+                {
+                    name : 'Saquib Ali',
+                    text : 'The Video looks cool...',
+                    replies : [
+                        {
+                            name : 'Saquib Ali',
+                            text : 'The Video looks cool...',
+                            replies : [
+                                name : 'Saquib Ali',
+                                text : 'The Video looks cool...',
+                                replies : [
+                                    
+                                ]
+                            ]
+                        },
+                        {
+                            name : 'Saquib Ali',
+                            text : 'The Video looks cool...',
+                            replies : [
+                                name : 'Saquib Ali',
+                                text : 'The Video looks cool...',
+                                replies : [
+                                    
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name : 'Saquib Ali',
+                    text : 'The Video looks cool...',
+                    replies : [
+                        name : 'Saquib Ali',
+                        text : 'The Video looks cool...',
+                        replies : [
+                            
+                        ]
+                    ]
+                }
+            ]
+        - Use *Recursion* -> See WatchPage And CommentList And Comment
