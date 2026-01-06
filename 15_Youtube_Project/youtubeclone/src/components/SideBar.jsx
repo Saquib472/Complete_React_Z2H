@@ -4,7 +4,7 @@ const SideBar = () => {
   const showSideBar = useSelector((store) => store.app?.showSideBar);
   if (!showSideBar) return null;
   return (
-    <div className="col-span-2 mr-6 max-h-[600px] overflow-y-scroll sticky top-24 left-0">
+    <div className="col-span-2 max-h-[600px] overflow-y-scroll sticky top-24 left-0">
       <div className="border-b border-gray-300 pb-2">
         <h1 className="p-2 rounded-lg font-bold bg-gray-200">Home</h1>
         <h1 className="p-2">Shorts</h1>

@@ -466,3 +466,13 @@ Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing ,
                 - UI request data from Backend. 
                 - After certain Interval UI keep polling Data from Server.
                 - Example - Gmail , Cricbuzz , YouTube Live Stream Chats.
+        - Live Chat Implementation :😁
+            - Create LiveChat & ChatMessage Component
+            - Design it.
+            - In LiveChat Component 
+                - To get the chat messages use API Polling.
+                - inside useEffect : after 1500 ms interval API Call should made and Update the UI.
+                - To Store the chats create a chatSlice. And update with the data while dispatching an action.
+                - Subscribe it to update the UI.
+                - Also remove the data.
+                - Create a input box. dispatch the same action.
