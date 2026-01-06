@@ -447,3 +447,22 @@ Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing ,
                 }
             ]
         - Use *Recursion* -> See WatchPage And CommentList And Comment
+    - Live Chat building :
+        - Live Chat >>>>>>> Infinite Scroll >>>>>> Pagination
+        - Challenges :- 
+            - Get Data Live
+            - Update the UI
+        - Two way we can handle the Live Data
+            - Web Sockets : 
+                - Two way Connection established, 
+                - It is like a handshake between a Server and a UI.
+                - Once connection is build, you can quickly share data from either side.
+                - Bydirectional Data, you can send data from UI to Backend also and Backend to UI also.
+                - No Regular Interval.
+                - Initial Connection takes a little time. Once connected it is very fast and easy to share data.
+                - Example - Trading/Stock Market Apps , WhatsApp , 
+            - API Polling : 
+                - One Directional 
+                - UI request data from Backend. 
+                - After certain Interval UI keep polling Data from Server.
+                - Example - Gmail , Cricbuzz , YouTube Live Stream Chats.
