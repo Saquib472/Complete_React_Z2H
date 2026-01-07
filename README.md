@@ -476,3 +476,24 @@ Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing ,
                 - Subscribe it to update the UI.
                 - Also remove the data.
                 - Create a input box. dispatch the same action.
+    - useMemo() Hook : 
+        - It is a React Hook that let's you cache the result of a calculation between re-renders.
+        - usememo(calculatevalue, dependencies)
+        - While doing heavy calculation it will help store the cache of the result of that calculation so that when rerenders happens then it will not recalculate. It will optimize. If the dependency change then only it will call the function again.
+        - See Demo Page.
+    - useCallback() Hook : 
+        - It is a react Hook that let's you cache a function defination between re-renders.
+        - useCallback(fn, dependencies)
+    - useRef() Hook : 
+        - It is a react Hook that lets you reference a value that's not needed for rendering.
+        - useRef(initialValue)
+        - useRef returns an object with a single property: current
+        - It holds the value if the component re-renders for state change but changing ref value will not trigger re-render.
+        - useRef vs Let (Normal declaration of value) vs useState.
+        - useRef : Holds the value but not trigger render process if it change.
+        - Let : If Component re-render then the value will be again the initial value. Changing this also not trigger the re-render.
+        - useState : Holds the value and changing this will trigger the render process.
+
+    - State (useState): You tell React the data changed; React recalculates the UI and updates the DOM for you.
+    - Refs (useRef): You grab the "handle" of the element and change it yourself. React doesn't "see" this change, so it doesn't bother re-rendering
+    - When you pass a ref to an input, React assigns the actual DOM element node to ref.current after the component mounts
