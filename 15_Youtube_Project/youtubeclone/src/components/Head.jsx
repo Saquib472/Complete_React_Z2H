@@ -41,23 +41,23 @@ const Head = () => {
 
   return (
     <>
-      <div className="py-4 px-6 grid grid-flow-col grid-cols-12 shadow-sm sticky top-0 bg-white bg-opacity-95 z-10">
-        <div className="flex items-center gap-3 col-span-1 ">
+      <div className="py-2 px-2 grid grid-flow-col grid-cols-12 shadow-sm sticky top-0 bg-white bg-opacity-95 z-10 sm:py-4 sm:px-6">
+        <div className="flex items-center gap-3 col-span-3 sm:col-span-1 ">
           <img
             onClick={handleSideBar}
-            className="max-w-10 cursor-pointer hover:bg-gray-100 hover:p-1 rounded-full"
+            className="w-4 cursor-pointer hover:bg-gray-100 hover:p-1 rounded-full sm:w-10"
             src={HAMBURGER_MENU}
             alt="menu"
           />
           <a href="/">
             <img
-              className="max-w-28 cursor-pointer"
+              className="max-w-16 cursor-pointer sm:max-w-28"
               src={YOUTUBE_LOGO}
               alt="logo"
             />
           </a>
         </div>
-        <div className="col-span-10 flex justify-center">
+        <div className="col-span-8 flex justify-center sm:col-span-10">
           <input
             value={searchQuery}
             onChange={(e) => {
@@ -70,21 +70,21 @@ const Head = () => {
               setSuggestion(false);
             }}
             id="searchInput"
-            className="w-5/12 border border-gray-400 py-2 px-4 rounded-l-full"
+            className="w-8/12 px-2 border border-gray-400 rounded-l-full sm:py-2 sm:px-4 sm:w-5/12"
             type="text"
             placeholder="Search"
           />
-          <button className="border border-gray-400 py-2 px-4 rounded-r-full bg-gray-100">
+          <button className="border px-2 border-gray-400 rounded-r-full bg-gray-100 sm:py-2 sm:px-4">
             {" "}
             🔍{" "}
           </button>
         </div>
-        <div className="col-span-1 flex justify-end">
-          <img className="h-9" src={PROFILE_ICON} alt="profile" />
+        <div className="col-span-1 flex justify-end items-center">
+          <img className="h-5 sm:h-9" src={PROFILE_ICON} alt="profile" />
         </div>
       </div>
       {searchResults.length > 0 && showSuggestion && (
-        <div className="w-4/12 bg-white fixed left-[32%] z-20 shadow-md border border-gray-300 rounded-lg">
+        <div className="w-8/12 bg-white fixed left-[32%] z-20 shadow-md border border-gray-300 rounded-lg sm:w-4/12">
           <ul className="p-2 w-full">
             {searchResults.map((s) => (
               <li

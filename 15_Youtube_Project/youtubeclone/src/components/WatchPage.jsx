@@ -18,7 +18,7 @@ const WatchPage = () => {
       <div className={`flex flex-col ${showSideBar ? 'col-span-6' : 'col-span-8' }`}>
         <div>
           <iframe
-            className="h-[500px] w-full rounded-xl"
+            className=" h-[300px] w-full rounded-xl md:h-[500px]"
             src={
               "https://www.youtube.com/embed/" +
               searchParams.get("v") +

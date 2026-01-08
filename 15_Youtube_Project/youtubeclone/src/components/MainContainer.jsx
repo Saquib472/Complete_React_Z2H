@@ -5,7 +5,7 @@ import VideoContainer from "./VideoContainer";
 const MainContainer = () => {
   const showSideBar = useSelector((store) => store.app.showSideBar);
   return (
-    <div className={showSideBar ? "col-span-10" : "col-span-12"}>
+    <div className={showSideBar ? "col-span-10 fixed -z-10 lg:z-0 lg:static" : "col-span-12"}>
       <ButtonList />
       <VideoContainer />
     </div>
