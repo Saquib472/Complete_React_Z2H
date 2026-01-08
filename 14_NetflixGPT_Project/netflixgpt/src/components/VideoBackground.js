@@ -8,22 +8,22 @@ const VideoBackground = ({ id }) => {
   const trailerId = trailer.key;
 
   return (
-    <div className="overflow-hidden w-max-[100%]">
-      <div className="relative pb-[56.25%] w-[300%] left-[-100%]">
-        <iframe
-          className="absolute top-0 left-0 w-[100%] h-[100%]"
-          src={
-            "https://www.youtube.com/embed/" +
-            trailerId +
-            "?autoplay=1&mute=1&loop=1&color=white&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1&playlist=" +
-            trailerId
-          }
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-        ></iframe>
-      </div>
-    </div>
+    <div className="relative w-full overflow-hidden h-[50vh] md:h-screen">
+  <iframe
+    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300%] md:w-[200%] lg:w-full aspect-video"
+    src={
+      "https://www.youtube.com/embed/" +
+      trailerId +
+      "?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&playlist=" +
+      trailerId
+    }
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+  ></iframe>
+  
+  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+</div>
   );
 };
 

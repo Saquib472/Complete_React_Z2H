@@ -72,11 +72,12 @@ const LogIn = () => {
           alt="Background"
         />
       </div>
+      <h1 className="bg-black bg-opacity-90 absolute text-white bottom-0 w-full p-2">This project uses TMDB Movie API to get the data of Movies and this Site is baned in India for Some Reason. So please Change your DNS settings to cloudflare (1.1.1.1)</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
         }}
-        className="bg-black bg-opacity-90 flex flex-col w-11/12 md:w-3/12 p-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg"
+        className="bg-black bg-opacity-90 flex flex-col w-11/12 md:w-96 p-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg"
       >
         <h1 className="text-white font-bold text-lg mb-3">
           {loggedInUser ? "Sign In" : "Sign Up"}

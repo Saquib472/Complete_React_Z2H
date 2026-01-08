@@ -5,7 +5,8 @@ const gptSlice = createSlice({
     initialState : {
         toggleToGptPage : false,
         gptMovies : null,
-        gptMovieNames : null
+        gptMovieNames : null,
+        gptApiKey : ''
     },
     reducers : {
         toggleBetweenBrowseAndGpt : (state)=>{
@@ -18,9 +19,15 @@ const gptSlice = createSlice({
         removeGptMovieResults : (state) => {
             state.gptMovies = null
             state.gptMovieNames = null
+        },
+        addGptApiKey : (state, action) => {
+            state.gptApiKey = action.payload
+        },
+        removeGptApiKey : (state, action) => {
+            state.gptApiKey = ''
         }
     }
 })
 
-export const {toggleBetweenBrowseAndGpt, addGptMovieResults, removeGptMovieResults} = gptSlice.actions
+export const {toggleBetweenBrowseAndGpt, addGptMovieResults, removeGptMovieResults, addGptApiKey, removeGptApiKey} = gptSlice.actions
 export default gptSlice.reducer

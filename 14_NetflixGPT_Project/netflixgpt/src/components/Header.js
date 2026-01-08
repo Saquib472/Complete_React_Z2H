@@ -5,7 +5,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth"
 import { useEffect } from "react"
 import { addUser, removeUser } from "../utils/userSlice"
 import { LANGUAGE_OPTIONS, LOGO_URL } from "../utils/constants"
-import { removeGptMovieResults, toggleBetweenBrowseAndGpt } from "../utils/gptSlice"
+import { removeGptApiKey, removeGptMovieResults, toggleBetweenBrowseAndGpt } from "../utils/gptSlice"
 import { selecLanguage } from "../utils/appConfigSlice"
 
 const Header = () => {
@@ -42,6 +42,7 @@ const Header = () => {
   const handleGptButton = ()=>{
     dispatch(toggleBetweenBrowseAndGpt())
     dispatch(removeGptMovieResults())
+    dispatch(removeGptApiKey())
   }
 
   const handleLanguage = (e)=>{
