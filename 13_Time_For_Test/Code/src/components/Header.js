@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 
 const Header = () => {
   const [userLogBtn , setUserLogBtn] = useState('LogIn')
+  const [openHam, setOpenHam] = useState(false)
   const online = useOnlineStatus() // A Custom Hook
   const {logInUser} = useContext(UserContext) // fetching the context using useContext Hook by passing the context we created
   const items = useSelector((state) => state.cart.items)
@@ -22,11 +23,11 @@ const Header = () => {
         </div> */}
         <div className="navItems">
           <ul className="flex items-center gap-5">
-            <li>Online Status: {online ? '🟢' : '🔴'}</li>
-            <li className="hover:scale-105"><Link to='/'>Home</Link></li>
-            <li className="hover:scale-105"><Link to='/about'>About</Link></li>
-            <li className="hover:scale-105"><Link to='/contact'>Contact</Link></li>
-            <li className="hover:scale-105"><Link to='/grocery'>Grocery</Link></li>
+            <li className="text-sm">Online Status: {online ? '🟢' : '🔴'}</li>
+            <li className="hidden hover:scale-105 md:block"><Link to='/'>Home</Link></li>
+            <li className="hidden hover:scale-105 md:block"><Link to='/about'>About</Link></li>
+            <li className="hidden hover:scale-105 md:block"><Link to='/contact'>Contact</Link></li>
+            <li className="hidden hover:scale-105 md:block"><Link to='/grocery'>Grocery</Link></li>
             <li className="w-16 cursor-pointer hover:scale-105 relative">
               <Link to='/cart'>
                 <img src={cart} />
@@ -38,6 +39,13 @@ const Header = () => {
               }}>{userLogBtn}</button>
             </li>
             <li className="font-bold">{logInUser}</li>
+            <li className="cursor-pointer md:hidden" onClick={()=> setOpenHam(!openHam)}> {!openHam ? '☰' : "X"}</li>
+            {openHam && <ul className="absolute z-10 top-20 right-3 bg-white opacity-95 py-2 px-2 shadow-lg rounded-lg md:hidden">
+              <li className="hover:bg-gray-200 px-8 my-1 mt-2 bg-gray-100"><Link to='/'>Home</Link></li>
+              <li className="hover:bg-gray-200 px-8 my-1 bg-gray-100"><Link to='/about'>About</Link></li>
+              <li className="hover:bg-gray-200 px-8 my-1 bg-gray-100"><Link to='/contact'>Contact</Link></li>
+              <li className="hover:bg-gray-200 px-8 my-1 mb-2  bg-gray-100"><Link to='/grocery'>Grocery</Link></li>
+            </ul>}
           </ul>
         </div>
       </div>

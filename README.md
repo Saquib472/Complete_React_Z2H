@@ -167,6 +167,7 @@ Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing ,
 - Check the __tests__ folder
 
 # 14_NetflixGPT_Project : 
+- Deployed Links => https://netflixgpt-2ea89.web.app/ Or https://netflixgpt-2ea89.firebaseapp.com/
 - npx create-react-app NetflixGPT (Uses Webpack bundler)
 - Configured Tailwind CSS
 - Routing
@@ -302,6 +303,8 @@ Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing ,
         - Movie Suggestions
 
 # 15_Youtube_Project : 
+- Deployed Link => https://youtubeclonen.netlify.app/
+- Disclaimer : This Project uses Youtube API Key to fetch the data and you have to create API Key (from console.cloud.google.com). And Add this to contants.
 - Tech Stack =>
     - React.js
     - Redux
@@ -398,7 +401,7 @@ Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing ,
                 - useEffect()
                 - setTimeOut - Start the timer => Make API CALL after 200ms.
         - Create a section for search results.
-        - Caching / memoizing the search result in store by creating a Slice so that less number of API Calls appens.
+        - Caching / memoizing the search result in store by creating a Slice so that less number of API Calls happens.
         - Create searchSlice.
         - KeyWord : LRU
         - For Cache Check the files : Head.jsx -> useEffect() hook And searchSlice.js

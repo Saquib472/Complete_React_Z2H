@@ -46,7 +46,7 @@ const Body = () => {
       </div>) : (
     <div className="px-5 max-w-7xl mx-auto my-10">
       <h1 className="font-bold mb-7 text-center text-2xl text-blue-700">Welcome {logInUser} 😀 Hungry! Grab your fav</h1>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center gap-2 flex-wrap">
         <div>
           <input data-testid="searchInput" className="shadow-lg/60 rounded-lg p-3 mr-2" type="text" value={searchByResName} onChange={(e)=>{
             setSearchByResName(e.target.value)
