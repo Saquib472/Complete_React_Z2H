@@ -126,16 +126,18 @@ Continuation of Foody Buddy App.
 - Controlled & Uncontrolled Component 
 - Lifting The State Up 
 - Props Drilling 
-- # Context API => 
+- Context API => 
     - createContext({}) 
     - useContext(Createdcontext) 
     - Fetching Context :  For Class based Component ==> Createdcontext.Consumer (Check AboutUs.js)
     - For Functional Component ==> CreatedContext.Provider (Check App.js) .
 
 # 12_Lets_Build_Our_Store : 
-Continuation of Foody Buddy App. Store, Redux Toolkit, Click Add Button -> Dispatch an Action -> Calls Reducer Fucntion -> Updates a Slice of the Store. 
-Component Subscribed to Store using Selector. 
-- # Steps => 
+Continuation of Foody Buddy App. 
+- Store, Redux Toolkit 
+- Click Add Button -> Dispatch an Action -> Calls Reducer Fucntion -> Updates a Slice of the Store. 
+- Component Subscribed to Store using Selector. 
+- Steps => 
     - install @reduxjs/toolkit And react-redux 
     - Configure Store : configureStore()
     - Connect React with Redux : Provider
@@ -145,25 +147,26 @@ Component Subscribed to Store using Selector.
 - Subscribe to a particularly needed slice reducer. Mutating Way. 
 
 # 13_Time_For_Test : 
-Continuation of Foody Buddy App. Types Of Testing (developer) ==> Unit Testing , Integration Testing , End to End Testing (e2e Testing). 
-- # Setting Up Testing in App ==> 
+Continuation of Foody Buddy App. 
+- Types Of Testing (developer) => Unit Testing , Integration Testing , End to End Testing (e2e Testing). 
+- Setting Up Testing in App => 
     - Install React Testing Library , 
     - Install Jest , 
     - Install Babel dependencies , 
-    - Configure Babel (babel.config.js) (This Babel Configuration will conflict with the configuration of Parcel which uses Babel so we have to handle this.) (Configure Parcel config file to disable default babel transpilation -> Parcel Doc --> Javascript --> Parcel --> Babel --> .parcelrc (configure this)) --> 
-    - npm run test --> npm init jest@latest 
-    - (Jest Configuration ==> The following questions will help Jest to create a suitable configuration for your project
+    - Configure Babel (babel.config.js) (This Babel Configuration will conflict with the configuration of Parcel which uses Babel so we have to handle this.) (Configure Parcel config file to disable default babel transpilation -> Parcel Doc -> Javascript -> Parcel -> Babel -> .parcelrc (configure this)) -> 
+    - npm run test -> npm init jest@latest 
+    - (Jest Configuration => The following questions will help Jest to create a suitable configuration for your project
     √ Would you like to use Typescript for the configuration file? ... no
     √ Choose the test environment that will be used for testing » jsdom (browser-like)
     √ Do you want Jest to add coverage reports? ... yes
     √ Which provider should be used to instrument code for coverage? » babel
     √ Automatically clear mock calls, instances, contexts and results before every test? ... yes ), 
 
-    - JS DOM (Like Browser) --> Install JSdom Library (npm install --save-dev jest-environment-jsdom)
+    - JS DOM (Like Browser) -> Install JSdom Library (npm install --save-dev jest-environment-jsdom)
     - Install @babel/preset-react - To make the JSX work in test cases. And Add this to babel.config.js
     - Install npm i -D @testing-library/jest-dom
-- For Test to be run on update --> "watch-test": "jest --watch" (add this to script of package.json)
-- For Test -- render Component , Querying using screen , Assertion using expect .
+- For Test to be run on update -> "watch-test": "jest --watch" (add this to script of package.json)
+- For Test -> render Component , Querying using screen , Assertion using expect .
 - Check the __tests__ folder
 
 # 14_NetflixGPT_Project : 
